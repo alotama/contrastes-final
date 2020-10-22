@@ -1,0 +1,6 @@
+Options +FollowSymlinks -Indexes -MultiViews
+RewriteEngine on
+RewriteBase /_modules/
+
+#Block access to the folder
+Deny from all

@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+@import "../colors";
+@import "../functions";
+
+.second__carousel {
+  position: relative;
+}
+
+.container__nav {
+  background-color: cyan;
+}
+
+.container__main {
+  background-color: gray;
+  width: 60%;
+  overflow: hidden;
+}
+
+.flickity-button {
+  position: absolute;
+}

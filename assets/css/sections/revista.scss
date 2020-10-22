@@ -1,0 +1,311 @@
+@charset "UTF-8";
+
+@import "../colors";
+@import "../functions";
+
+.hero__highlight-notes {
+  margin: var(--space-giant) 0 var(--space-extra-giant);
+  .flickity-viewport {
+    overflow: visible;
+  }
+}
+
+.news__container .news__highlight {
+  background: url(../../img/sections/revista/notas-0001.jpg) center center no-repeat!important;
+  background-size: cover!important;
+}
+
+.flickity-page-dots .dot {
+  border-radius: 0;
+  width: 5em;
+  height: 3px;
+  &.is-selected {
+    background-color: $contrastes-blue;
+  }
+}
+
+.highlight-note__container {
+  width: 100%;
+  margin: 0 var(--space-giant);
+}
+
+.header__notice {
+  margin-top: var(--space-lg);
+}
+
+.notice__image {
+  margin: var(--space-xl) 0;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.notice__content {
+  margin-bottom: var(--space-giant);
+  p {
+    margin-bottom: var(--space-normal);
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+  .notice__title--internal {
+    margin-bottom: var(--space-normal)
+  }
+  .notice__image--internal {
+    margin: var(--space-lg) 0;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+}
+
+.news__container {
+  margin-bottom: var(--space-giant);
+  .news__highlight {
+    margin-bottom: var(--space-lg);
+    @media#{$large}{
+      padding: 2em 12em 9em 2em;
+    }
+    .highlight__title {
+      color: $contrastes-black;
+      align-content: flex-start;
+    }
+  }
+  .articles__container {
+    margin-top: var(--space-lg);
+  }
+}
+
+.related__notice {
+  display: grid;
+  grid-template-columns: auto;
+  grid-column-gap: 1em;
+  grid-row-gap: 2em;
+  grid-template-rows: 1fr repeat(4, 20em);
+  grid-template-areas:
+  "title"
+  "N1"
+  "N2"
+  "N3"
+  "N4";
+  @media#{$large}{
+    grid-template-rows: 1fr repeat(1, 20em);
+    grid-template-areas:
+    "title title title title"
+    "N1 N2 N3 N4";
+  }
+}
+
+.section__title {
+  grid-area: title
+}
+
+.related-notice__item {
+  &--1 {
+    grid-area: N1;
+  }
+  &--2 {
+    grid-area: N2;
+  }
+  &--3 {
+    grid-area: N3;
+  }
+  &--4 {
+    grid-area: N4;
+  }
+}
+
+.notice__item--single {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 65% 35%;
+  grid-template-areas: "thumbnail" "description";
+  @extend %drop-shadow;
+  .notice__description {
+    padding: 1em 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+}
+
+.notice__thumbnail {
+  grid-area: thumbnail;
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.notice__description {
+  grid-area: description;
+  .notice__detail {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.6rem;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}
+
+.notice__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.courses-carousel__contrainer {
+  position: relative;
+  .course__carousel {
+    width: 95%;
+  }
+  .append-cell__container {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    .button--append {
+      height: 100%;
+      width: 3em;
+      background-color: white;
+      border: none;
+      border-radius: 6px;
+    }
+  }
+}
+
+.course__carousel {
+  margin: 0 0 var(--space-giant);
+  .course__cell {
+    width: 50%;
+    padding-right: 1em;
+    box-sizing: border-box;
+    @media#{$large}{
+      width: 25%;
+    }
+  }
+}
+
+.entrevistas__container {
+  margin-bottom: var(--space-giant);
+}
+
+.entrevistas__hightlighted {
+  background: url('../../img/sections/revista/entrevista-0001.jpg') center center no-repeat;
+  background-size: cover;
+  padding: 2em 6em 9em 2em;
+  border-radius: 11px;
+  margin-bottom: var(--space-normal);
+  @media#{$large}{
+    margin-bottom: auto;
+  }
+  .entrevistas__preview {
+    color: $white;
+  }
+}
+
+.entrevistas__others {
+  .entrevistas__row {
+    margin-bottom: 1.45em;
+    &:nth-child(even){
+      margin-bottom: 0;
+    }
+    .entrevistas__preview {
+      background-size: cover;
+      padding: 1em 2em 6em 2em;
+      border-radius: 11px;
+      margin-bottom: var(--space-normal);
+      color: $white;
+      @media#{$large}{
+        margin-bottom: auto;
+      }
+    }
+  }
+}
+
+.other--1 {
+  background: url('../../img/sections/revista/entrevista-0000.jpg') center center no-repeat;
+}
+
+.other--2 {
+  background: url('../../img/sections/revista/entrevista-0002.jpg') center center no-repeat;
+}
+
+.other--3 {
+  background: url('../../img/sections/revista/entrevista-0003.jpg') center center no-repeat;
+}
+
+.other--4 {
+  background: url('../../img/sections/revista/entrevista-0004.jpg') center center no-repeat;
+}
+
+.course__title {
+  margin-top: var(--space-sm)
+}
+
+.course__img {
+  @extend %drop-shadow;
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease-in-out;
+  }
+  &:hover {
+    transform: scale(1.01);
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+  & * {
+    cursor: pointer;
+  }
+}
+
+  .equipment__article {
+    display: flex;
+    background-color: $white;
+    border-radius: 11px;
+    margin-bottom: var(--space-normal);
+    flex-wrap: wrap;
+    @media#{$large}{
+      flex-wrap: nowrap;
+    }
+    .article__img {
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 100%;
+      border-radius: 11px;
+      height: 15em;
+      @media#{$large}{
+        width: 50%;
+        height: auto;
+      }
+      &--1 {
+        background-image: url('../../img/sections/revista/camara-0001.jpg')
+      }
+      &--2 {
+        background-image: url('../../img/sections/revista/camara-0002.jpg')
+      }
+      &--3 {
+        background-image: url('../../img/sections/revista/camara-0003.jpg')
+      }
+      &--4 {
+        background-image: url('../../img/sections/revista/camara-0004.jpg')
+      }
+      &--5 {
+        background-image: url('../../img/sections/revista/camara-0005.jpg')
+      }
+      &--6 {
+        background-image: url('../../img/sections/revista/camara-0006.jpg')
+      }
+    }
+    .article__content {
+      padding: 1em 2em;
+      width: 50%;
+    }
+  }

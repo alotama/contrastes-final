@@ -1,0 +1,409 @@
+@charset "UTF-8";
+
+@import "../colors";
+@import "../functions";
+
+.hero__container {
+    position: relative;
+    background: url('../../img/sections/fotografia/hero-fotografia.jpg') no-repeat center center;
+    background-size: cover;
+    height: 90vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin-bottom: var(--space-xl)
+}
+
+.hero__overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($contrastes-black,.3);
+}
+
+.hero__search {
+    margin: 0 auto;
+    width: 80%;
+    text-align: center;
+    .input__search {
+      color: $white;
+    }
+    p {
+        margin-top: var(--space-sm);
+    }
+}
+
+.dashboard__table {
+  margin-bottom: var(--space-giant)
+}
+
+.courses-carousel__contrainer {
+  position: relative;
+  .course__carousel {
+    width: 95%;
+  }
+  .append-cell__container {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    right: 0;
+    .button--append {
+      height: 100%;
+      width: 3em;
+      background-color: white;
+      border: none;
+      border-radius: 6px;
+    }
+  }
+}
+
+.course__carousel--1, .course__carousel--2, .course__carousel--3 {
+  margin: 0 0 var(--space-lg);
+  .course__cell {
+    width: 50%;
+    padding-right: 1em;
+    box-sizing: border-box;
+    @media#{$large}{
+      width: 25%;
+    }
+  }
+}
+
+.course__img {
+  @extend %drop-shadow;
+  &::after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    border-radius: 5px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    transition: opacity 0.3s ease-in-out;
+  }
+  &:hover {
+    transform: scale(1.01);
+  }
+  &:hover::after {
+    opacity: 1;
+  }
+  & * {
+    cursor: pointer;
+  }
+}
+
+.courses__container {
+  margin-bottom: var(--space-giant)
+}
+
+.separator__container {
+  margin: var(--space-giant) 0;
+}
+
+.related__notice {
+  display: grid;
+  grid-template-columns: auto;
+  grid-column-gap: 1em;
+  grid-row-gap: 2em;
+  grid-template-rows: repeat(3, 20em);
+  grid-template-areas:
+  "N1"
+  "N2"
+  "N3";
+  @media#{$large}{
+    grid-template-rows: 20em;
+    grid-template-areas:
+    "N1 N2 N3";
+  }
+}
+
+.related-notice__item {
+  &--1 {
+    grid-area: N1;
+  }
+  &--2 {
+    grid-area: N2;
+  }
+  &--3 {
+    grid-area: N3;
+  }
+}
+
+.photo__grid {
+  display: grid;
+  grid-template-columns: auto;
+  grid-column-gap: 1em;
+  grid-row-gap: 1em;
+  grid-template-rows: repeat(16, 15em);
+  grid-template-areas:
+  "P1"
+  "P1"
+  "P1"
+  "P2"
+  "P3"
+  "P3"
+  "P4"
+  "P4"
+  "P5"
+  "P6"
+  "P7"
+  "P7"
+  "P8"
+  "P8"
+  "P9"
+  "P10";
+  @media#{$large}{
+    grid-template-rows: repeat(6, 15em);
+    grid-template-areas:
+    "P1 P2 P3"
+    "P1 P4 P3"
+    "P1 P4 P5"
+    "P6 P4 P7"
+    "P8 P9 P7"
+    "P8 P10 P7";
+  }
+}
+
+.grid--1,.grid--2  {
+  .photo__item {
+    border-radius: 10px;
+    &--1 {
+      grid-area: P1;
+    }
+    &--2 {
+      grid-area: P2;
+    }
+    &--3 {
+      grid-area: P3;
+    }
+    &--4 {
+      grid-area: P4;
+    }
+    &--5 {
+      grid-area: P5;
+    }
+    &--6 {
+      grid-area: P6;
+    }
+    &--7 {
+      grid-area: P7;
+    }
+    &--8 {
+      grid-area: P8;
+    }
+    &--9 {
+      grid-area: P9;
+    }
+    &--10 {
+      grid-area: P10;
+    }
+  }
+}
+
+.separator__cta {
+  margin-bottom: var(--space-giant);
+  @media#{$large}{
+    margin-bottom: auto;
+  }
+}
+
+.grid--1 {
+  .photo__item {
+    &--1 {
+      background: url('../../img/sections/fotografia/contrastes-clases-21.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--2 {
+      background: url('../../img/sections/fotografia/contrastes-clases-27.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--3 {
+      background: url('../../img/sections/fotografia/contrastes-clases-28.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--4 {
+      background: url('../../img/sections/fotografia/contrastes-clases-22.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--5 {
+      background: url('../../img/sections/fotografia/contrastes-clases-32.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--6 {
+      background: url('../../img/sections/fotografia/contrastes-clases-33.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--7 {
+      background: url('../../img/sections/fotografia/contrastes-clases-23.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--8 {
+      background: url('../../img/sections/fotografia/contrastes-clases-29.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--9 {
+      background: url('../../img/sections/fotografia/contrastes-clases-34.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--10 {
+      background: url('../../img/sections/fotografia/contrastes-clases-35.jpg') center center no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.grid--2 {
+  .photo__item {
+    &--1 {
+      background: url('../../img/sections/fotografia/contrastes-clases-24.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--2 {
+      background: url('../../img/sections/fotografia/contrastes-clases-27.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--3 {
+      background: url('../../img/sections/fotografia/contrastes-clases-30.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--4 {
+      background: url('../../img/sections/fotografia/contrastes-clases-25.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--5 {
+      background: url('../../img/sections/fotografia/contrastes-clases-36.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--6 {
+      background: url('../../img/sections/fotografia/contrastes-clases-37.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--7 {
+      background: url('../../img/sections/fotografia/contrastes-clases-26.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--8 {
+      background: url('../../img/sections/fotografia/contrastes-clases-31.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--9 {
+      background: url('../../img/sections/fotografia/contrastes-clases-38.jpg') center center no-repeat;
+      background-size: cover;
+    }
+    &--10 {
+      background: url('../../img/sections/fotografia/contrastes-clases-40.jpg') center center no-repeat;
+      background-size: cover;
+    }
+  }
+}
+
+.notice__item--single {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 65% 35%;
+  grid-template-areas: "thumbnail" "description";
+  @extend %drop-shadow;
+  .notice__description {
+    padding: 1em 0.5em;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+  }
+}
+
+.notice__thumbnail {
+  grid-area: thumbnail;
+  border-radius: 11px;
+  overflow: hidden;
+}
+
+.notice__description {
+  grid-area: description;
+  .notice__detail {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 0.6rem;
+    line-height: 1;
+    text-transform: uppercase;
+  }
+}
+
+.notice__container {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+}
+
+.footer__container {
+  margin-top: var(--space-giant)
+}
+
+.search__filter {
+  background-color: $contrastes-white;
+  border-radius: 100px;
+  display: inline-flex;
+  overflow: hidden;
+  position: relative;
+  margin-right: var(--space-normal);
+  margin-top: var(--space-md);
+  margin-bottom: var(--space-sm);
+  &:last-of-type {
+    margin-right: 0;
+  }
+  .filter__container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 5em;
+    z-index: 1;
+    .filter__item {
+      border: none;
+      border-radius: 100px;
+      background-color: transparent;
+      position: relative;
+      padding: 0.5em 2em;
+      z-index: 2;
+      &.js-active {
+        background-color: $contrastes-green;
+      }
+    }
+  }
+}
+
+.search__container {
+  margin: var(--space-md) 0 var(--space-giant);
+}
+
+.js-category-selected, .js-level-selected{
+  height: 100%;
+  background-color: $contrastes-green;
+  position: absolute;
+  top: 0;
+  border-radius: 5em;
+}
+
+.tag__container {
+  display: block;
+  margin: var(--space-sm) 0;
+  .tag__item {
+    display: inline-block;
+    padding: .5em 1em;
+    background-color: transparent;
+    border-radius: 100px;
+    margin-right: .5em;
+    cursor: pointer;
+    &:last-of-type {
+      margin-right: 0;
+    }
+    &.js-active {
+      background-color: $white;
+    }
+  }
+}

@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+@import "../colors";
+@import "../functions";
+
+.background__img {
+  background: url('https://dummyimage.com/1920x1080/f1f1f1/ffffff') center center no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.login--1 {
+  background: url('../../img/sections/perfil/background_iniciar-sesion.jpg') center center no-repeat;
+}
+
+.registro--1 {
+  background: url('../../img/sections/perfil/background_registro.jpg') center center no-repeat;
+}
+
+.social-login__container {
+  width: 100%;
+  .social-login__button {
+    margin-bottom: var(--space-sm);
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+    .btn--facebook {
+      background-color: #4267B2;
+      width: 100%;
+      color: #ffffff;
+      padding: 0.8em 1em;
+      font-size: 1rem;
+    }
+    .btn--google {
+      background-color: #ffffff;
+      width: 100%;
+      color: $contrastes-black;
+      padding: 0.8em 1em;
+      font-size: 1rem;
+    }
+    .social__icon {
+      margin-right: var(--space-sm)
+    }
+  }
+}
+
+.separator__container {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: var(--space-normal) 0;
+  .separator {
+    &::after {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 45%;
+      height: 1px;
+      background-color: $contrastes-black;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 0;
+    }
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      width: 45%;
+      height: 1px;
+      background-color: $contrastes-black;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+    }
+  }
+}
+
+.account__container {
+  height: 100vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  .section__title, .separator__container, .form__container {
+    width: 100%;
+  }
+  .section__title {
+    margin-bottom: var(--space-normal);
+  }
+  .form__content {
+    .form__input {
+      background-color: $white;
+      border-radius: 50px;
+      margin-bottom: var(--space-sm);
+      padding: .8em 1em;
+    }
+    .form__button {
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      box-sizing: border-box;
+      margin-top: var(--space-normal);
+    }
+    .form__messege {
+      width: 100%;
+      text-align: center;
+      a {
+        margin-top: var(--space-lg);
+        display: block;
+        padding: 1em;
+        cursor: pointer;
+      }
+    }
+  }
+}

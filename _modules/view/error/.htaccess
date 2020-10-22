@@ -1,0 +1,6 @@
+Options +FollowSymlinks -Indexes -MultiViews
+RewriteEngine on
+RewriteBase /_modules/view/error/
+
+#Block access to the folder
+Allow from all
